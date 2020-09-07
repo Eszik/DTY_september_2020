@@ -1,6 +1,7 @@
 import argparse
 
 from player import HumanPlayer, RandomPlayer
+from ai_player import AIPlayer
 from ui_game import UIGame
 
 from ai_player import AIPlayer

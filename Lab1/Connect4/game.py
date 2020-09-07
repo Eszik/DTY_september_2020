@@ -85,7 +85,7 @@ class Game(object):
             self.mayShowDebug()
             self.winner = self.getWinner(pos)
             self.currPlayer = (self.currPlayer + 1) % 2
-
+            
         self.mayShowDebug()
 
         if self.winner is None:
