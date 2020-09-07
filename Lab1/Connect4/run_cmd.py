@@ -3,7 +3,7 @@ import argparse
 from game import Game
 from player import HumanPlayer, RandomPlayer
 from ai_player import AIPlayer
-from table_generator import generate_table
+from table_generator import generate_table, gaussian_table
 
 
 if __name__ == '__main__':
@@ -18,8 +18,6 @@ if __name__ == '__main__':
 
     dicc = {}
     best_tab = [[1,2,3,3,2,1],[3,4,5,5,4,3],[7,9,11,11,9,7],[9,10,13,13,10,9],[7,9,11,11,9,7],[3,4,5,5,4,3],[1,2,3,3,2,1]]
-<<<<<<< HEAD
-    
     nb_players = 5
 
     with open("fights.txt", "a") as log:
@@ -78,27 +76,6 @@ if __name__ == '__main__':
 
         print("Winner : " + best_player.name)
         log.write("\n\nBest player : " + best_player.name)
-            
-=======
-    new_tab = generate_table()
-
-    player1 = AIPlayer(best_tab)
-    player1.name = args.p1
-
-    player2 = AIPlayer(new_tab)
-    player2.name = args.p2
-    for i in range(10):
-        game = Game(player1, player2, args.cols, args.rows, args.num, verbose=False)
-
-        if game.run() == 1:
-            print(1)
-            new_tab = generate_table()
-            player2 = AIPlayer(new_tab)
-        else:
-            print(2)
-            best_tab = new_tab
-            new_tab = generate_table()
-            player1 = AIPlayer(new_tab)
     
     print(best_tab)
 
@@ -109,8 +86,7 @@ if __name__ == '__main__':
         [7,9,11,11,9,7],
         [3,4,5,5,4,3],
         [1,2,3,3,2,1]])
-    
-    player2 = AIPlayer(best_tab)
+
+    player2 = AIPlayer(gaussian_table(4,0))
     game = Game(player1, player2, args.cols, args.rows, args.num, verbose=True)
     game.run()
->>>>>>> a8b0fd55c7e0cb1a8f9e3780ef5d2f69bc12048b
