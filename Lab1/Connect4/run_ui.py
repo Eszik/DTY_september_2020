@@ -12,12 +12,6 @@ if __name__ == '__main__':
     parser.add_argument('--p2', default='player 2')
     args = parser.parse_args()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    player1 = AIPlayer()
-=======
-=======
->>>>>>> d1e04cbf3974877b23c8d623548ab71370da007b
 
     player1 = AIPlayer([[1,2,3,3,2,1],
         [3,4,5,5,4,3],
@@ -26,10 +20,6 @@ if __name__ == '__main__':
         [7,9,11,11,9,7],
         [3,4,5,5,4,3],
         [1,2,3,3,2,1]] )
-<<<<<<< HEAD
->>>>>>> d1e04cbf3974877b23c8d623548ab71370da007b
-=======
->>>>>>> d1e04cbf3974877b23c8d623548ab71370da007b
     player1.name = args.p1
     player2 = AIPlayer([[1,2,3,3,2,1],
         [3,5,5,5,4,3],
