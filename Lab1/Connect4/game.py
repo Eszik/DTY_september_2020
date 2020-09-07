@@ -47,10 +47,12 @@ class Game(object):
         self.moves = 0
 
     def mayShowDebug(self):
+
         if not self.verbose:
             return
 
         print(self.board, '\n')
+
         if not self.isOver():
             return
 
@@ -85,3 +87,7 @@ class Game(object):
             self.currPlayer = (self.currPlayer + 1) % 2
             
         self.mayShowDebug()
+
+        if self.winner is None:
+            return 0
+        return self.winner.color

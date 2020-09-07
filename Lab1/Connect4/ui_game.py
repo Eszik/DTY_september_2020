@@ -5,7 +5,6 @@ import multiprocessing
 from board import Board
 from game import Game
 
-
 class UIGame(Game):
     """Play the connect 4 game, but in a Tkinter GUI"""
     def __init__(self, player1, player2, dbg=None):
@@ -133,8 +132,11 @@ class UIGame(Game):
         if self.winner is not None:
             text = "{0} ({1}) wins!".format(
                 self.winner.name, Board.valueToStr(self.winner.color))
+            return self.winner.color
         self.text += '\n{}'.format(text)
         self.info.set(self.text)
         self.over = True
         self.tk.after(self.timeout, self.tk.destroy)
-        return True
+
+
+        return 0

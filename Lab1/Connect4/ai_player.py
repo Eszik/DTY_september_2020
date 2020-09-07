@@ -83,10 +83,10 @@ class AIPlayer(Player):
                 col = state
         return col
     
-    def __init__(self):
+    def __init__(self, tableau):
         super().__init__()
         self.name = "QuadBot"
-        self.tableau = [[1,2,3,3,2,1],[3,4,5,5,4,3],[7,9,11,11,9,7],[9,10,13,13,10,9],[7,9,11,11,9,7],[3,4,5,5,4,3],[1,2,3,3,2,1]]      #valeurs arbitraires choisies pour le plateau
+        self.tableau = tableau     #valeurs arbitraires choisies pour le plateau
 
     
     def getColumn(self, board):
