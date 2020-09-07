@@ -27,9 +27,12 @@ if __name__ == '__main__':
     player2 = AIPlayer(tab1)
     player2.name = args.p2
 <<<<<<< HEAD
+<<<<<<< HEAD
     game = Game(player1, player2, args.cols, args.rows, args.num, verbose=False)
     game.run()
 =======
+=======
+>>>>>>> d1e04cbf3974877b23c8d623548ab71370da007b
 
     for i in range(10):
         game = Game(player1, player2, args.cols, args.rows, args.num, verbose=False)
@@ -46,4 +49,7 @@ if __name__ == '__main__':
     
     print(best_tab)
             
+<<<<<<< HEAD
+>>>>>>> d1e04cbf3974877b23c8d623548ab71370da007b
+=======
 >>>>>>> d1e04cbf3974877b23c8d623548ab71370da007b
