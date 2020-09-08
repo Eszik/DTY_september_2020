@@ -17,3 +17,5 @@ def gaussian_table(sigma, mu):
     d = np.array([x,]*6).transpose() + np.array([y,]*7)
     g = np.exp(-( (d-mu)**2 / ( 2.0 * sigma**2 ) ) )
     return g
+
+print(gaussian_table(4.8, 0))

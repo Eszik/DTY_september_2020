@@ -14,7 +14,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
 
-    player1 = AIPlayer(gaussian_table(4.8,0))
+    player1 = AIPlayer()
     player1.name = args.p1
     player2 = HumanPlayer()
     player2.name = args.p2
